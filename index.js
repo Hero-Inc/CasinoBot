@@ -363,10 +363,10 @@ var commands = [
 										});
 										bot.createMessage(msg.channel.id, 'There was an error updating your balance. You have not lost anything.');
 									} else if (wins > 0) {
-										log.debug(`${msg.author.id} succesfully won ${winamt} tokens by playing roulette (totalBet: ${bet})`);
+										log.debug(`${msg.author.id} succesfully won ${winamt} tokens by playing roulette (totalBet: ${bet}, Spun:${spin})`);
 										bot.createMessage(msg.channel.id, `Congratulations, you bet \`${bet}\` tokens and won \`${winamt}\` tokens. \`${wins}/${args.length} bets won\``);
 									} else {
-										log.debug(`${msg.author.id} succesfully lost ${bet} tokens by playing roulette`);
+										log.debug(`${msg.author.id} succesfully lost ${bet} tokens by playing roulette (Spun: ${spin})`);
 										bot.createMessage(msg.channel.id, `You didn't win, better luck next time.`);
 									}
 								});
